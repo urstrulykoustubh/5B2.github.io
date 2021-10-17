@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To find Amstrong numbers</title>
+</head>
+
+<body>
+    <header>
+        <h1>Program to find armstrong number from a given range</h1>
+    </header>
+    <hr />
+
+    <article>
+        <hr />
+
+        <section>
+            <h3>Code</h3>
+            <code>
+          <pre>
+#include <stdio.h>
+    #include <math.h>
+        #include <stdio.h>
+        int main()
+        {
+            int lower, upper, i, temp1, temp2, rem, num = 0;
+            float sum_pow = 0.0;
+            printf("Enter lower range: ");
+            scanf("%d", &lower);
+            printf("Enter upper range: ");
+            scanf("%d", &upper);
+        
+            printf("Armstrong numbers between %d and %d are: ", lower, upper);
+        
+            for (i = lower + 1; i < upper; ++i)
+            {
+                temp1 = i;
+                temp2 = i;
+        
+             
+                while (temp1 != 0)
+                {
+                    temp1 /= 10;
+                    ++num;
+                }
+        
+              
+                while (temp2 != 0) {
+                    rem = temp2 % 10;
+                    sum_pow += pow(rem, num);
+                    temp2 /= 10;
+                }
+        
+               
+                if ((int)sum_pow == i) {
+                    printf("%d ", i);
+                }
+        
+                num = 0;
+                sum_pow = 0;
+            }
+            return 0;
+        }
+        </pre
+          >
+        </code>
+        </section>
+        <hr />
+
+        <section>
+            <h3>Sample input</h3>
+            <kbd>Enter lower range: 100</kbd>
+            <kbd>Enter lower range: 1000</kbd>
+            <h3>Sample output</h3>
+            <samp>Armstrong numbers between 100 and 1000 are: 153 370 371 407<samp>
+        </section>
+
+        <section>
+            <h3>Variable used in the program</h3>
+            <var>lower, </var> <var>upper, </var><var>i, </var><var>temp1, </var><var>temp2, </var><var>num,
+            </var><var>rem
+            </var>
+        </section>
+    </article>
+    <hr />
+
+    <footer>
+        <h4>
+            What are amstrong numbers ?
+            <br>
+            <a
+                href="https://wikimass.com/armstrong-number#:~:text=Armstrong%20Numbers%201%20Armstrong%20Numbers.%20An%20Armstrong%20number,or%20not.%203%20Range%20Calculator%204%20Useful%20links">here</a>!
+        </h4>
+    </footer>
+</body>
+
+</html>
